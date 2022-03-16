@@ -3,9 +3,7 @@ import json
 
 # To set your environment variables in your terminal run the following line:
 # export 'BEARER_TOKEN'='<your_bearer_token>'
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAOf2TwEAAAAAJDsN00F6MoakIdXNQ9N%2Bep%2BRewg%3DB9Fi74sbuFgvN7r0hW7E9RRWOIdQ0tDYVbx3SkYYG15CLo8ZyI"
-
-bearer_token='AAAAAAAAAAAAAAAAAAAAAJQRZwEAAAAAo2iHUYtS9ycUfUxx6Ply1FEEWgU%3D3WgB5hQYAaZgy1qojPU4aFhjwHUYRKnm5epjxCihH9cywP7uLL'
+bearer_token = '<your_bearer_token>'
 
 def create_url():
     type_tweet="CaracolTV"
