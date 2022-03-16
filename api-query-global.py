@@ -4,7 +4,7 @@ import tweepy
 import json
 import csv
 def get_tweets(type_tweet="CaracolTV"):
-    headers = {"Authorization": "Bearer {}".format('AAAAAAAAAAAAAAAAAAAAAOf2TwEAAAAAJDsN00F6MoakIdXNQ9N%2Bep%2BRewg%3DB9Fi74sbuFgvN7r0hW7E9RRWOIdQ0tDYVbx3SkYYG15CLo8ZyI')}
+    headers = {"Authorization": "Bearer {}".format('<your-bearer-token>')}
     url = "https://api.twitter.com/2/tweets/search/recent?query=from:"+f"{type_tweet}"
     print(url)
     response = requests.request("GET", url, headers=headers).json()
@@ -13,7 +13,7 @@ def get_tweets(type_tweet="CaracolTV"):
 
 
 def load_trends_world():
-    headers = {"Authorization": "Bearer {}".format('AAAAAAAAAAAAAAAAAAAAAOf2TwEAAAAAJDsN00F6MoakIdXNQ9N%2Bep%2BRewg%3DB9Fi74sbuFgvN7r0hW7E9RRWOIdQ0tDYVbx3SkYYG15CLo8ZyI')}
+    headers = {"Authorization": "Bearer {}".format('<your-bearer-token>')}
     url = "https://api.twitter.com/1.1/trends/available.json"
     print(url)
     response = requests.request("GET", url, headers=headers).json()
@@ -22,7 +22,7 @@ def load_trends_world():
 
 
 def load_trends_closest(lat=4.598056,long=-74.075833):
-    headers = {"Authorization": "Bearer {}".format('AAAAAAAAAAAAAAAAAAAAAOf2TwEAAAAAJDsN00F6MoakIdXNQ9N%2Bep%2BRewg%3DB9Fi74sbuFgvN7r0hW7E9RRWOIdQ0tDYVbx3SkYYG15CLo8ZyI')}
+    headers = {"Authorization": "Bearer {}".format('<your-bearer-token>')}
     url = "https://api.twitter.com/1.1/trends/closest.json?"+"lat="+f"{lat}"+"&"+"long="+f"{long}"
     print(url)
     response = requests.request("GET", url, headers=headers).json()
@@ -30,7 +30,7 @@ def load_trends_closest(lat=4.598056,long=-74.075833):
     df.to_csv('Tweets_Tendencias_Mas_Cercanas.csv')    
 
 def create_twitter_url():
-    headers = {"Authorization": "Bearer {}".format('AAAAAAAAAAAAAAAAAAAAAOf2TwEAAAAAJDsN00F6MoakIdXNQ9N%2Bep%2BRewg%3DB9Fi74sbuFgvN7r0hW7E9RRWOIdQ0tDYVbx3SkYYG15CLo8ZyI')}
+    headers = {"Authorization": "Bearer {}".format('<your-bearer-token>')}
     handle = "CaracolTV"
     max_results = 100
     mrf = "max_results={}".format(max_results)
@@ -45,7 +45,7 @@ def create_twitter_url():
 
 
 def tendencias():
-    headers = {"Authorization": "Bearer {}".format('AAAAAAAAAAAAAAAAAAAAAOf2TwEAAAAAJDsN00F6MoakIdXNQ9N%2Bep%2BRewg%3DB9Fi74sbuFgvN7r0hW7E9RRWOIdQ0tDYVbx3SkYYG15CLo8ZyI')}
+    headers = {"Authorization": "Bearer {}".format('<your-bearer-token>')}
     url = "https://api.twitter.com/1.1/trends/place.json?id=23424787"
     print(url)
     response = requests.request("GET", url, headers=headers).json()
